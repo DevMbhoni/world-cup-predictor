@@ -28,6 +28,89 @@ STAGE_NAMES = {
     7: "Final",
 }
 
+def resolve_slot_team(
+    slot_team_id,
+    slot_team_name,
+    source_match_id,
+    source_type,
+    source_label,
+    matches_by_id,
+    projected_winners_by_match,
+):
+    """
+    Resolve a bracket slot.
+
+    Rules:
+    1. If the slot already has a real team_id/team_name, use it as confirmed.
+    2. If the slot comes from a completed source match, use the actual winner/loser.
+    3. If the source match is not completed, keep the placeholder label and only attach projection.
+    """
+
+    if slot_team_id is not None and slot_team_name is not None:
+        return {
+            "team_id": slot_team_id,
+            "team_name": slot_team_name,
+            "is_confirmed": True,
+            "projection": None,
+            "source": {
+                "source_match_id": source_match_id,
+                "source_type": source_type,
+                "label": source_label,
+            },
+        }
+
+    source_match = matches_by_id.get(source_match_id)
+
+    if source_match is not None:
+        source_completed = bool(source_match.get("is_completed"))
+
+        if source_completed:
+            if source_type == "winner":
+                actual = source_match.get("winner")
+            elif source_type == "loser":
+                actual = source_match.get("loser")
+            else:
+                actual = None
+
+            if actual and actual.get("team_id") is not None:
+                return {
+                    "team_id": actual.get("team_id"),
+                    "team_name": actual.get("team_name"),
+                    "is_confirmed": True,
+                    "projection": None,
+                    "source": {
+                        "source_match_id": source_match_id,
+                        "source_type": source_type,
+                        "label": source_label,
+                    },
+                }
+
+    projected = projected_winners_by_match.get(source_match_id)
+
+    return {
+        "team_id": None,
+        "team_name": None,
+        "is_confirmed": False,
+        "projection": projected,
+        "source": {
+            "source_match_id": source_match_id,
+            "source_type": source_type,
+            "label": source_label or build_source_label(source_type, source_match_id),
+        },
+    }
+
+
+def build_source_label(source_type, source_match_id):
+    if source_match_id is None:
+        return "To be decided"
+
+    if source_type == "winner":
+        return f"Winner of match {source_match_id}"
+
+    if source_type == "loser":
+        return f"Loser of match {source_match_id}"
+
+    return f"Match {source_match_id}"
 
 def load_csv(path: Path) -> pd.DataFrame:
     if not path.exists():
