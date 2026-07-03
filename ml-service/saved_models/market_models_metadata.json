@@ -1,0 +1,118 @@
+{
+  "feature_columns": [
+    "home_team",
+    "away_team",
+    "tournament",
+    "country",
+    "neutral",
+    "year",
+    "month",
+    "day_of_week",
+    "home_team_matches_before",
+    "home_avg_goals_for_last_10",
+    "home_avg_goals_against_last_10",
+    "home_avg_points_last_10",
+    "home_win_rate_last_10",
+    "home_clean_sheet_rate_last_10",
+    "home_failed_to_score_rate_last_10",
+    "away_team_matches_before",
+    "away_avg_goals_for_last_10",
+    "away_avg_goals_against_last_10",
+    "away_avg_points_last_10",
+    "away_win_rate_last_10",
+    "away_clean_sheet_rate_last_10",
+    "away_failed_to_score_rate_last_10",
+    "experience_diff",
+    "goals_for_diff_last_10",
+    "goals_against_diff_last_10",
+    "points_diff_last_10",
+    "win_rate_diff_last_10",
+    "clean_sheet_rate_diff_last_10",
+    "failed_to_score_rate_diff_last_10",
+    "home_elo_before",
+    "away_elo_before",
+    "elo_diff_before",
+    "home_expected_score",
+    "away_expected_score"
+  ],
+  "categorical_features": [
+    "home_team",
+    "away_team",
+    "tournament",
+    "country"
+  ],
+  "numeric_features": [
+    "neutral",
+    "year",
+    "month",
+    "day_of_week",
+    "home_team_matches_before",
+    "home_avg_goals_for_last_10",
+    "home_avg_goals_against_last_10",
+    "home_avg_points_last_10",
+    "home_win_rate_last_10",
+    "home_clean_sheet_rate_last_10",
+    "home_failed_to_score_rate_last_10",
+    "away_team_matches_before",
+    "away_avg_goals_for_last_10",
+    "away_avg_goals_against_last_10",
+    "away_avg_points_last_10",
+    "away_win_rate_last_10",
+    "away_clean_sheet_rate_last_10",
+    "away_failed_to_score_rate_last_10",
+    "experience_diff",
+    "goals_for_diff_last_10",
+    "goals_against_diff_last_10",
+    "points_diff_last_10",
+    "win_rate_diff_last_10",
+    "clean_sheet_rate_diff_last_10",
+    "failed_to_score_rate_diff_last_10",
+    "home_elo_before",
+    "away_elo_before",
+    "elo_diff_before",
+    "home_expected_score",
+    "away_expected_score"
+  ],
+  "targets": {
+    "over_2_5": {
+      "file_name": "over_2_5_model.pkl",
+      "positive_label": "Over 2.5 goals",
+      "selected_model": {
+        "model_name": "over_2_5 Random Forest",
+        "accuracy": 0.5798852679116319,
+        "log_loss": 0.6728661722612979,
+        "roc_auc": 0.6133298387588053
+      }
+    },
+    "both_teams_score": {
+      "file_name": "btts_model.pkl",
+      "positive_label": "Both teams score",
+      "selected_model": {
+        "model_name": "both_teams_score Random Forest",
+        "accuracy": 0.5753692176248016,
+        "log_loss": 0.6740410888388041,
+        "roc_auc": 0.5811116535793992
+      }
+    },
+    "home_clean_sheet": {
+      "file_name": "home_clean_sheet_model.pkl",
+      "positive_label": "Home clean sheet",
+      "selected_model": {
+        "model_name": "home_clean_sheet Random Forest",
+        "accuracy": 0.6188209447088978,
+        "log_loss": 0.6401584052434031,
+        "roc_auc": 0.7028409709031269
+      }
+    },
+    "away_clean_sheet": {
+      "file_name": "away_clean_sheet_model.pkl",
+      "positive_label": "Away clean sheet",
+      "selected_model": {
+        "model_name": "away_clean_sheet Random Forest",
+        "accuracy": 0.6699621628219211,
+        "log_loss": 0.6106031483194589,
+        "roc_auc": 0.7456416549943911
+      }
+    }
+  }
+}
