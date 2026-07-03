@@ -7,6 +7,7 @@ import BracketPage from "./features/tournament/BracketPage";
 import GoldenBootPage from "./features/scorers/GoldenBootPage";
 import RankingsPage from "./features/rankings/RankingsPage";
 
+
 function App() {
   const [activePage, setActivePage] = useState<PageKey>("dashboard");
 

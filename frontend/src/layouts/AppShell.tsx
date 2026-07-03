@@ -11,6 +11,8 @@ import {
     Search,
     Trophy,
 } from "lucide-react";
+import { useQuery } from "@tanstack/react-query";
+import { getApiHealth } from "../api/health";
 
 type AppShellProps = {
     activePage: PageKey;
@@ -68,6 +70,14 @@ export default function AppShell({
     onPageChange,
     children,
 }: AppShellProps) {
+    const healthQuery = useQuery({
+        queryKey: ["api-health"],
+        queryFn: getApiHealth,
+        refetchInterval: 30000,
+        retry: 1,
+    });
+
+    const apiOnline = healthQuery.isSuccess;
     return (
         <main className="min-h-screen text-slate-950">
             <header className="bg-[#081426] text-white shadow-sm">
@@ -88,9 +98,17 @@ export default function AppShell({
                             </p>
                         </div>
 
-                        <div className="flex w-fit items-center gap-3 rounded-2xl border border-sky-300/25 bg-sky-400/10 px-4 py-3 text-sm text-sky-100">
-                            <Activity size={18} className="text-sky-300" />
-                            <span>FastAPI connected</span>
+                        <div
+                            className={`flex w-fit items-center gap-3 rounded-2xl border px-4 py-3 text-sm ${apiOnline
+                                    ? "border-emerald-300/25 bg-emerald-400/10 text-emerald-100"
+                                    : "border-red-300/25 bg-red-400/10 text-red-100"
+                                }`}
+                        >
+                            <Activity
+                                size={18}
+                                className={apiOnline ? "text-emerald-300" : "text-red-300"}
+                            />
+                            <span>{apiOnline ? "FastAPI connected" : "FastAPI offline"}</span>
                         </div>
                     </div>
 

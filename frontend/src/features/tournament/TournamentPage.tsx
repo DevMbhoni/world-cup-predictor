@@ -102,7 +102,6 @@ export default function TournamentPage() {
                                         color: "#fff",
                                         border: "1px solid rgba(255,255,255,0.1)",
                                         borderRadius: "16px",
-                                        color: "#fff",
                                     }}
                                     formatter={(value) => [`${toPercent(Number(value))}`, "Win probability"]}
                                 />
