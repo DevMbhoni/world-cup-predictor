@@ -39,7 +39,7 @@ export default function RankingsPage() {
             <section className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-2xl shadow-black/20">
                 <div className="flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
                     <div>
-                        <p className="text-xs font-semibold uppercase tracking-[0.35em] text-sky-600">
+                        <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#2f54eb]">
                             Team rankings
                         </p>
                         <h2 className="mt-3 text-3xl font-semibold text-slate-950">
@@ -52,7 +52,7 @@ export default function RankingsPage() {
                     </div>
 
                     {teams[0] && (
-                        <div className="rounded-3xl border border-amber-400/20 bg-amber-400/10 px-5 py-4">
+                        <div className="rounded-3xl border border-amber-400/20 bg-[#ff651f]/10 px-5 py-4">
                             <p className="text-sm text-amber-700">Current number one</p>
                             <p className="mt-1 text-2xl font-semibold text-slate-950">
                                 {teams[0].team}
@@ -68,7 +68,7 @@ export default function RankingsPage() {
             <div className="grid gap-6 xl:grid-cols-[1.1fr_0.9fr]">
                 <section className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-2xl shadow-black/20">
                     <div className="flex items-center gap-3">
-                        <div className="rounded-2xl border border-cyan-400/20 bg-cyan-400/10 p-3 text-sky-600">
+                        <div className="rounded-2xl border border-cyan-400/20 bg-[#00e0c6]/10 p-3 text-[#2f54eb]">
                             <BarChart3 size={22} />
                         </div>
                         <div>
@@ -113,7 +113,7 @@ export default function RankingsPage() {
                                 <Bar
                                     dataKey="elo_rating"
                                     radius={[10, 10, 0, 0]}
-                                    fill="#22d3ee"
+                                    fill="#6a00ff"
                                 />
                             </BarChart>
                         </ResponsiveContainer>
@@ -122,7 +122,7 @@ export default function RankingsPage() {
 
                 <section className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-2xl shadow-black/20">
                     <div className="flex items-center gap-3">
-                        <div className="rounded-2xl border border-amber-400/20 bg-amber-400/10 p-3 text-amber-600">
+                        <div className="rounded-2xl border border-amber-400/20 bg-[#ff651f]/10 p-3 text-[#ff651f]">
                             <Medal size={22} />
                         </div>
                         <div>
@@ -177,7 +177,7 @@ export default function RankingsPage() {
                                     <td className="px-4 py-4 font-medium text-slate-950">
                                         {team.team}
                                     </td>
-                                    <td className="px-4 py-4 text-sky-600">
+                                    <td className="px-4 py-4 text-[#2f54eb]">
                                         {team.elo_rating.toFixed(2)}
                                     </td>
                                     <td className="rounded-r-2xl px-4 py-4 text-slate-700">
@@ -201,14 +201,14 @@ function RankingCard({ team, rank }: { team: TeamRanking; rank: number }) {
                     <p className="text-sm text-slate-500">Rank {rank}</p>
                     <p className="mt-1 font-semibold text-slate-950">{team.team}</p>
                 </div>
-                <p className="text-xl font-semibold text-sky-600">
+                <p className="text-xl font-semibold text-[#2f54eb]">
                     {team.elo_rating.toFixed(0)}
                 </p>
             </div>
 
             <div className="mt-3 h-2 rounded-full bg-slate-800">
                 <div
-                    className="h-2 rounded-full bg-cyan-400"
+                    className="h-2 rounded-full bg-[#00e0c6]"
                     style={{
                         width: `${Math.min(Math.max((team.elo_rating - 1500) / 7, 8), 100)}%`,
                     }}
@@ -221,7 +221,7 @@ function RankingCard({ team, rank }: { team: TeamRanking; rank: number }) {
 function PageState({ title, message }: { title: string; message: string }) {
     return (
         <section className="rounded-[2rem] border border-slate-200 bg-white p-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-sky-600">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#2f54eb]">
                 {title}
             </p>
             <h2 className="mt-3 text-3xl font-semibold text-slate-950">{message}</h2>

@@ -54,7 +54,7 @@ export default function MatchPredictor() {
         <div className="grid gap-6 xl:grid-cols-[430px_1fr]">
             <section className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-2xl shadow-black/30">
                 <div className="flex items-center gap-4">
-                    <div className="rounded-2xl border border-cyan-400/20 bg-cyan-400/10 p-3 text-sky-600">
+                    <div className="rounded-2xl border border-cyan-400/20 bg-[#00e0c6]/10 p-3 text-[#2f54eb]">
                         <Swords size={22} />
                     </div>
                     <div>
@@ -97,7 +97,7 @@ export default function MatchPredictor() {
                             !awayTeam ||
                             homeTeam === awayTeam
                         }
-                        className="flex w-full items-center justify-center gap-2 rounded-2xl bg-cyan-400 px-5 py-3 font-semibold text-slate-950 transition hover:bg-cyan-300 disabled:opacity-50"
+                        className="flex w-full items-center justify-center gap-2 rounded-2xl bg-[#00e0c6] px-5 py-3 font-semibold text-slate-950 transition hover:bg-cyan-300 disabled:opacity-50"
                     >
                         <Search size={18} />
                         {predictionQuery.isFetching ? "Predicting..." : "Predict match"}
@@ -125,7 +125,7 @@ export default function MatchPredictor() {
                 {!prediction && !predictionQuery.isError && (
                     <div className="flex h-full min-h-[560px] items-center justify-center text-center">
                         <div>
-                            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-3xl border border-cyan-400/20 bg-cyan-400/10 text-sky-600">
+                            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-3xl border border-cyan-400/20 bg-[#00e0c6]/10 text-[#2f54eb]">
                                 <TrendingUp size={28} />
                             </div>
                             <h3 className="mt-5 text-2xl font-semibold text-slate-950">
@@ -154,7 +154,7 @@ export default function MatchPredictor() {
 function ModelStackItem({ label }: { label: string }) {
     return (
         <div className="flex items-center gap-2">
-            <CheckCircle2 size={16} className="text-sky-600" />
+            <CheckCircle2 size={16} className="text-[#2f54eb]" />
             <span>{label}</span>
         </div>
     );
@@ -220,7 +220,7 @@ function TeamCombobox({
                                 key={team}
                                 type="button"
                                 onClick={() => selectTeam(team)}
-                                className="block w-full rounded-xl px-3 py-2 text-left text-sm text-slate-200 transition hover:bg-cyan-400/10 hover:text-sky-700"
+                                className="block w-full rounded-xl px-3 py-2 text-left text-sm text-slate-200 transition hover:bg-[#00e0c6]/10 hover:text-sky-700"
                             >
                                 {team}
                             </button>
@@ -244,7 +244,7 @@ function PredictionPanel({ prediction }: { prediction: PredictionResult }) {
         <div>
             <div className="flex flex-col justify-between gap-4 border-b border-slate-200 pb-6 lg:flex-row">
                 <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.35em] text-sky-600">
+                    <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#2f54eb]">
                         Final prediction
                     </p>
                     <h2 className="mt-3 text-3xl font-semibold text-slate-950 md:text-4xl">
@@ -260,7 +260,7 @@ function PredictionPanel({ prediction }: { prediction: PredictionResult }) {
                     </p>
                 </div>
 
-                <div className="rounded-3xl border border-amber-400/20 bg-amber-400/10 px-6 py-4 lg:text-right">
+                <div className="rounded-3xl border border-amber-400/20 bg-[#ff651f]/10 px-6 py-4 lg:text-right">
                     <p className="text-sm text-amber-700">Prediction probability</p>
                     <p className="mt-1 text-4xl font-semibold text-slate-950">
                         {final.probability_percent}%
@@ -289,7 +289,7 @@ function PredictionPanel({ prediction }: { prediction: PredictionResult }) {
             <div className="mt-6 grid gap-4 xl:grid-cols-2">
                 <div className="rounded-3xl border border-slate-200 bg-slate-50 p-5">
                     <div className="flex items-center gap-2 text-slate-700">
-                        <Shield size={18} className="text-sky-600" />
+                        <Shield size={18} className="text-[#2f54eb]" />
                         <h3 className="font-semibold text-slate-950">Expected goals</h3>
                     </div>
 
@@ -358,9 +358,9 @@ function ProbabilityCard({
     accent: "cyan" | "gold" | "red";
 }) {
     const barClass = {
-        cyan: "bg-cyan-400",
-        gold: "bg-amber-400",
-        red: "bg-red-400",
+        cyan: "bg-[#00e0c6]",
+        gold: "bg-[#ff651f]",
+        red: "bg-[#ff2a1a]",
     };
 
     return (
@@ -395,7 +395,7 @@ function MarketRow({ label, value }: { label: string; value: number }) {
             </div>
             <div className="mt-2 h-2 rounded-full bg-slate-800">
                 <div
-                    className="h-2 rounded-full bg-cyan-400"
+                    className="h-2 rounded-full bg-[#00e0c6]"
                     style={{ width: `${Math.min(Math.max(value, 0), 100)}%` }}
                 />
             </div>

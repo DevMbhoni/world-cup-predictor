@@ -39,7 +39,7 @@ export default function TournamentPage() {
             <section className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-2xl shadow-black/20">
                 <div className="flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
                     <div>
-                        <p className="text-xs font-semibold uppercase tracking-[0.35em] text-sky-600">
+                        <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#2f54eb]">
                             Tournament simulation
                         </p>
                         <h2 className="mt-3 text-3xl font-semibold text-slate-950">
@@ -51,7 +51,7 @@ export default function TournamentPage() {
                         </p>
                     </div>
 
-                    <div className="rounded-3xl border border-amber-400/20 bg-amber-400/10 px-5 py-4">
+                    <div className="rounded-3xl border border-amber-400/20 bg-[#ff651f]/10 px-5 py-4">
                         <p className="text-sm text-amber-700">Current favourite</p>
                         <p className="mt-1 text-2xl font-semibold text-slate-950">
                             {teams[0]?.team ?? "Unavailable"}
@@ -66,7 +66,7 @@ export default function TournamentPage() {
             <div className="grid gap-6 xl:grid-cols-[1.1fr_0.9fr]">
                 <section className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-2xl shadow-black/20">
                     <div className="flex items-center gap-3">
-                        <div className="rounded-2xl border border-cyan-400/20 bg-cyan-400/10 p-3 text-sky-600">
+                        <div className="rounded-2xl border border-cyan-400/20 bg-[#00e0c6]/10 p-3 text-[#2f54eb]">
                             <Trophy size={22} />
                         </div>
                         <div>
@@ -108,7 +108,7 @@ export default function TournamentPage() {
                                 <Bar
                                     dataKey="winner_probability"
                                     radius={[10, 10, 0, 0]}
-                                    fill="#22d3ee"
+                                    fill="#2f54eb"
                                 />
                             </BarChart>
                         </ResponsiveContainer>
@@ -117,7 +117,7 @@ export default function TournamentPage() {
 
                 <section className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-2xl shadow-black/20">
                     <div className="flex items-center gap-3">
-                        <div className="rounded-2xl border border-amber-400/20 bg-amber-400/10 p-3 text-amber-600">
+                        <div className="rounded-2xl border border-amber-400/20 bg-[#ff651f]/10 p-3 text-[#ff651f]">
                             <Crown size={22} />
                         </div>
                         <div>
@@ -201,7 +201,7 @@ export default function TournamentPage() {
 function PageCard({ title, message }: { title: string; message: string }) {
     return (
         <section className="rounded-[2rem] border border-slate-200 bg-white p-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-sky-600">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#2f54eb]">
                 {title}
             </p>
             <h2 className="mt-3 text-3xl font-semibold text-slate-950">{message}</h2>
@@ -223,14 +223,14 @@ function ContenderRow({
                     <p className="text-sm text-slate-500">Rank {rank}</p>
                     <p className="mt-1 font-semibold text-slate-950">{team.team}</p>
                 </div>
-                <p className="text-xl font-semibold text-sky-600">
+                <p className="text-xl font-semibold text-[#2f54eb]">
                     {toPercent(team.winner_probability)}
                 </p>
             </div>
 
             <div className="mt-3 h-2 rounded-full bg-slate-800">
                 <div
-                    className="h-2 rounded-full bg-cyan-400"
+                    className="h-2 rounded-full bg-[#00e0c6]"
                     style={{
                         width: `${Math.min(Math.max(team.winner_probability * 100, 0), 100)}%`,
                     }}
@@ -243,7 +243,7 @@ function ContenderRow({
 function StatusBadge({ status }: { status: string }) {
     const style =
         status === "Active"
-            ? "border-cyan-400/20 bg-cyan-400/10 text-sky-700"
+            ? "border-cyan-400/20 bg-[#00e0c6]/10 text-sky-700"
             : status === "Eliminated"
                 ? "border-red-400/20 bg-red-500/10 text-red-700"
                 : "border-slate-500/20 bg-slate-500/10 text-slate-700";

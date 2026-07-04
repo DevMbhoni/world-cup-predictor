@@ -1,24 +1,34 @@
+# Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 .venv/
 venv/
+
+# Environment variables
 .env
+.env.*
+!.env.example
 
-ml-service/saved_models/*.pkl
-data/predictions/
-data/processed/
+# Python caches / testing
+.pytest_cache/
+.coverage
+htmlcov/
 
-!data/predictions/.gitkeep
-!data/processed/.gitkeep
-
+# Node
 node_modules/
 dist/
-.env.local
-.env.production
 
+# Frontend environment variables
+frontend/.env
+frontend/.env.local
+frontend/.env.production
+
+# OS
 .DS_Store
 Thumbs.db
+
+# IDE
 .vscode/
 .idea/

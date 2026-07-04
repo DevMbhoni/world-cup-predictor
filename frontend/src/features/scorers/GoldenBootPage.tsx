@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { Award, Crown, Target, TrendingUp } from "lucide-react";
+import { Award, Crown, Target } from "lucide-react";
 import {
     Bar,
     BarChart,
@@ -40,7 +40,7 @@ export default function GoldenBootPage() {
             <section className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-2xl shadow-black/20">
                 <div className="flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
                     <div>
-                        <p className="text-xs font-semibold uppercase tracking-[0.35em] text-sky-600">
+                        <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#2f54eb]">
                             Golden Boot
                         </p>
                         <h2 className="mt-3 text-3xl font-semibold text-slate-950">
@@ -53,7 +53,7 @@ export default function GoldenBootPage() {
                     </div>
 
                     {leader && (
-                        <div className="rounded-3xl border border-amber-400/20 bg-amber-400/10 px-5 py-4">
+                        <div className="rounded-3xl border border-amber-400/20 bg-[#ff651f]/10 px-5 py-4">
                             <p className="text-sm text-amber-700">Current favourite</p>
                             <p className="mt-1 text-2xl font-semibold text-slate-950">
                                 {leader.player_name}
@@ -69,7 +69,7 @@ export default function GoldenBootPage() {
             <div className="grid gap-6 xl:grid-cols-[1.1fr_0.9fr]">
                 <section className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-2xl shadow-black/20">
                     <div className="flex items-center gap-3">
-                        <div className="rounded-2xl border border-amber-400/20 bg-amber-400/10 p-3 text-amber-600">
+                        <div className="rounded-2xl border border-amber-400/20 bg-[#ff651f]/10 p-3 text-[#ff651f]">
                             <Crown size={22} />
                         </div>
                         <div>
@@ -115,7 +115,7 @@ export default function GoldenBootPage() {
                                 <Bar
                                     dataKey="golden_boot_probability"
                                     radius={[10, 10, 0, 0]}
-                                    fill="#f59e0b"
+                                    fill="#ff651f"
                                 />
                             </BarChart>
                         </ResponsiveContainer>
@@ -124,7 +124,7 @@ export default function GoldenBootPage() {
 
                 <section className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-2xl shadow-black/20">
                     <div className="flex items-center gap-3">
-                        <div className="rounded-2xl border border-cyan-400/20 bg-cyan-400/10 p-3 text-sky-600">
+                        <div className="rounded-2xl border border-cyan-400/20 bg-[#00e0c6]/10 p-3 text-[#2f54eb]">
                             <Award size={22} />
                         </div>
                         <div>
@@ -184,10 +184,10 @@ export default function GoldenBootPage() {
                                     <td className="px-4 py-4 text-slate-700">
                                         {player.expected_final_goals.toFixed(2)}
                                     </td>
-                                    <td className="px-4 py-4 text-amber-600">
+                                    <td className="px-4 py-4 text-[#ff651f]">
                                         {toPercent(player.golden_boot_probability)}
                                     </td>
-                                    <td className="px-4 py-4 text-sky-600">
+                                    <td className="px-4 py-4 text-[#2f54eb]">
                                         {toPercent(player.top_3_probability)}
                                     </td>
                                     <td className="rounded-r-2xl px-4 py-4 text-slate-700">
@@ -206,7 +206,7 @@ export default function GoldenBootPage() {
 function PageState({ title, message }: { title: string; message: string }) {
     return (
         <section className="rounded-[2rem] border border-slate-200 bg-white p-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-sky-600">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#2f54eb]">
                 {title}
             </p>
             <h2 className="mt-3 text-3xl font-semibold text-slate-950">{message}</h2>
@@ -231,7 +231,7 @@ function LeaderCard({
                         {player.team_name} · {player.current_goals} current goals
                     </p>
                 </div>
-                <p className="text-xl font-semibold text-amber-600">
+                <p className="text-xl font-semibold text-[#ff651f]">
                     {toPercent(player.golden_boot_probability)}
                 </p>
             </div>
@@ -245,7 +245,7 @@ function LeaderCard({
                 </div>
                 <div className="rounded-xl bg-slate-50 p-3">
                     <p className="text-slate-500">Top 3 chance</p>
-                    <p className="mt-1 font-semibold text-sky-600">
+                    <p className="mt-1 font-semibold text-[#2f54eb]">
                         {toPercent(player.top_3_probability)}
                     </p>
                 </div>

@@ -47,7 +47,7 @@ export default function BracketPage() {
             <section className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-2xl shadow-black/20">
                 <div className="flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
                     <div>
-                        <p className="text-xs font-semibold uppercase tracking-[0.35em] text-sky-600">
+                        <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#2f54eb]">
                             Tournament bracket
                         </p>
                         <h2 className="mt-3 text-3xl font-semibold text-slate-950">
@@ -63,7 +63,7 @@ export default function BracketPage() {
 
             <section className="rounded-[2rem] border border-slate-200 bg-white p-5 shadow-2xl shadow-black/20">
                 <div className="mb-6 flex items-center gap-3">
-                    <div className="rounded-2xl border border-cyan-400/20 bg-cyan-400/10 p-3 text-sky-600">
+                    <div className="rounded-2xl border border-cyan-400/20 bg-[#00e0c6]/10 p-3 text-[#2f54eb]">
                         <GitBranch size={22} />
                     </div>
                     <div>
@@ -176,11 +176,11 @@ export default function BracketPage() {
                                         <td className="px-4 py-4 text-slate-700">
                                             {formatScore(match)}
                                         </td>
-                                        <td className="px-4 py-4 text-sky-600">
+                                        <td className="px-4 py-4 text-[#2f54eb]">
                                             {getWinnerDisplay(match, matchMap)}
                                         </td>
                                         <td className="rounded-r-2xl px-4 py-4">
-                                            <StatusBadge match={match} />
+                                            <StatusBadge match={match} matchMap={matchMap} />
                                         </td>
                                     </tr>
                                 );
@@ -260,7 +260,7 @@ function BracketMatchCard({
                 <p className="text-xs font-medium uppercase tracking-[0.2em] text-slate-500">
                     M{match.match_id}
                 </p>
-                <StatusBadge match={match} />
+                <StatusBadge match={match} matchMap={matchMap} />
             </div>
 
             <div className="space-y-2">
@@ -296,14 +296,14 @@ function FinalCard({
 
     return (
         <div
-            className={`rounded-[2rem] border border-amber-400/20 bg-amber-400/10 p-5 shadow-xl shadow-black/20 ${compact ? "" : "min-h-[190px]"
+            className={`rounded-[2rem] border border-amber-400/20 bg-[#ff651f]/10 p-5 shadow-xl shadow-black/20 ${compact ? "" : "min-h-[190px]"
                 }`}
         >
             <div className="mb-3 flex items-center justify-between gap-3">
                 <p className="text-xs font-medium uppercase tracking-[0.2em] text-amber-700">
                     M{match.match_id}
                 </p>
-                <StatusBadge match={match} />
+                <StatusBadge match={match} matchMap={matchMap} />
             </div>
 
             <div className="space-y-2">
@@ -352,7 +352,7 @@ function TeamRow({
     return (
         <div
             className={`flex items-center justify-between gap-3 rounded-2xl border px-3 py-3 ${isWinner
-                    ? "border-cyan-400/25 bg-cyan-400/10"
+                    ? "border-cyan-400/25 bg-[#00e0c6]/10"
                     : "border-slate-200 bg-slate-50"
                 }`}
         >
@@ -362,7 +362,7 @@ function TeamRow({
                 </p>
 
                 {resolved.projectedName && (
-                    <p className="mt-1 truncate text-xs text-amber-600">
+                    <p className="mt-1 truncate text-xs text-[#ff651f]">
                         Projection: {resolved.projectedName}
                     </p>
                 )}
@@ -397,22 +397,58 @@ function PlaceholderMatchCard({ matchId }: { matchId: number }) {
     );
 }
 
-function StatusBadge({ match }: { match: BracketMatch }) {
-    const label = match.is_completed
-        ? "Completed"
-        : match.winner.is_projected
-            ? "Projected"
-            : "Scheduled";
-
-    const style = match.is_completed
-        ? "border-cyan-400/20 bg-cyan-400/10 text-sky-700"
-        : match.winner.is_projected
-            ? "border-amber-400/20 bg-amber-400/10 text-amber-200"
-            : "border-slate-500/20 bg-slate-500/10 text-slate-700";
+function isMatchupConfirmed(
+    match: BracketMatch,
+    matchMap: Map<number, BracketMatch>
+) {
+    const home = resolveBracketSlot(match.home_team, match, matchMap);
+    const away = resolveBracketSlot(match.away_team, match, matchMap);
 
     return (
-        <span className={`rounded-full border px-3 py-1 text-xs font-medium ${style}`}>
-            {label}
+        home.resolvedTeamId !== null &&
+        home.resolvedTeamId !== undefined &&
+        away.resolvedTeamId !== null &&
+        away.resolvedTeamId !== undefined
+    );
+}
+
+function StatusBadge({
+    match,
+    matchMap,
+}: {
+    match: BracketMatch;
+    matchMap?: Map<number, BracketMatch>;
+}) {
+    if (match.is_completed) {
+        return (
+            <span className="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700">
+                Completed
+            </span>
+        );
+    }
+
+    const matchupConfirmed =
+        matchMap !== undefined && isMatchupConfirmed(match, matchMap);
+
+    if (matchupConfirmed) {
+        return (
+            <span className="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-medium text-sky-700">
+                Confirmed
+            </span>
+        );
+    }
+
+    if (match.winner.is_projected) {
+        return (
+            <span className="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-medium text-amber-700">
+                Projected
+            </span>
+        );
+    }
+
+    return (
+        <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-600">
+            Scheduled
         </span>
     );
 }
@@ -546,7 +582,7 @@ function formatScore(match: BracketMatch) {
 function PageState({ title, message }: { title: string; message: string }) {
     return (
         <section className="rounded-[2rem] border border-slate-200 bg-white p-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-sky-600">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#2f54eb]">
                 {title}
             </p>
             <h2 className="mt-3 text-3xl font-semibold text-slate-950">{message}</h2>

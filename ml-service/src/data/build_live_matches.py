@@ -1,167 +1,190 @@
 from pathlib import Path
+
 import pandas as pd
 
 
 CURRENT_FILE = Path(__file__).resolve()
-PROJECT_ROOT = CURRENT_FILE.parents[3]
+ML_SERVICE_DIR = CURRENT_FILE.parents[2]
+PROJECT_ROOT = ML_SERVICE_DIR.parent
 
-RAW_2026_DIR = PROJECT_ROOT / "data" / "raw" / "worldcup_2026"
-PROCESSED_DIR = PROJECT_ROOT / "data" / "processed"
+RAW_DATA_DIR = PROJECT_ROOT / "data" / "raw" / "worldcup_2026"
+PROCESSED_DATA_DIR = PROJECT_ROOT / "data" / "processed"
 
-MATCHES_PATH = RAW_2026_DIR / "matches.csv"
-MANUAL_UPDATES_PATH = RAW_2026_DIR / "manual_match_updates.csv"
-KNOCKOUT_BRACKET_PATH = RAW_2026_DIR / "knockout_bracket.csv"
+MATCHES_PATH = RAW_DATA_DIR / "matches.csv"
+BRACKET_PATH = RAW_DATA_DIR / "knockout_bracket.csv"
+OUTPUT_PATH = PROCESSED_DATA_DIR / "worldcup_2026_matches_live.csv"
 
-OUTPUT_PATH = PROCESSED_DIR / "worldcup_2026_matches_live.csv"
-
-
-BASE_MATCH_COLUMNS = [
-    "match_id",
-    "date",
-    "kickoff_time_utc",
-    "stage_id",
-    "venue_id",
-    "home_team_id",
-    "away_team_id",
-    "home_score",
-    "away_score",
-    "status",
-    "home_xg",
-    "away_xg",
-    "referee_id",
-    "player_of_the_match_id",
-]
+MANUAL_BRACKET_START_MATCH_ID = 89
+MANUAL_BRACKET_END_MATCH_ID = 104
 
 
-def load_csv_if_exists(path: Path) -> pd.DataFrame:
+def load_csv(path: Path) -> pd.DataFrame:
     if not path.exists():
-        print(f"Optional file not found: {path}")
-        return pd.DataFrame()
+        raise FileNotFoundError(f"Required file not found: {path}")
 
-    try:
-        return pd.read_csv(path)
-    except pd.errors.EmptyDataError:
-        print(f"Optional file is empty: {path}")
-        return pd.DataFrame()
+    return pd.read_csv(path)
 
 
-def normalize_match_columns(df: pd.DataFrame) -> pd.DataFrame:
-    df = df.copy()
+def align_columns(
+    left: pd.DataFrame,
+    right: pd.DataFrame,
+) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """
+    Align two DataFrames to the union of their columns.
 
-    for col in BASE_MATCH_COLUMNS:
-        if col not in df.columns:
-            df[col] = pd.NA
+    This is important because matches.csv does not contain bracket source
+    columns such as home_source_match_id, while knockout_bracket.csv does.
+    """
 
-    return df
+    all_columns = list(dict.fromkeys([*left.columns, *right.columns]))
 
+    left = left.copy()
+    right = right.copy()
 
-def apply_manual_updates(matches: pd.DataFrame, updates: pd.DataFrame) -> pd.DataFrame:
-    if updates.empty:
-        return matches
+    for column in all_columns:
+        if column not in left.columns:
+            left[column] = pd.NA
 
-    matches = matches.copy()
-    updates = normalize_match_columns(updates)
+        if column not in right.columns:
+            right[column] = pd.NA
 
-    for _, update in updates.iterrows():
-        match_id = update["match_id"]
-
-        if pd.isna(match_id):
-            continue
-
-        match_id = int(match_id)
-
-        if match_id not in set(matches["match_id"]):
-            new_row = {col: update.get(col, pd.NA) for col in BASE_MATCH_COLUMNS}
-            matches = pd.concat([matches, pd.DataFrame([new_row])], ignore_index=True)
-            continue
-
-        idx = matches.index[matches["match_id"] == match_id][0]
-
-        for col in BASE_MATCH_COLUMNS:
-            value = update.get(col, pd.NA)
-
-            if pd.notna(value) and str(value).strip() != "":
-                matches.at[idx, col] = value
-
-    return matches
-
-
-def add_missing_knockout_rows(matches: pd.DataFrame, bracket: pd.DataFrame) -> pd.DataFrame:
-    if bracket.empty:
-        return matches
-
-    matches = matches.copy()
-    existing_ids = set(matches["match_id"])
-
-    rows_to_add = []
-
-    for _, row in bracket.iterrows():
-        match_id = int(row["match_id"])
-
-        if match_id in existing_ids:
-            continue
-
-        rows_to_add.append(
-            {
-                "match_id": match_id,
-                "date": row.get("date", pd.NA),
-                "kickoff_time_utc": row.get("kickoff_time_utc", pd.NA),
-                "stage_id": row.get("stage_id", pd.NA),
-                "venue_id": row.get("venue_id", pd.NA),
-                "home_team_id": row.get("home_team_id", pd.NA),
-                "away_team_id": row.get("away_team_id", pd.NA),
-                "home_score": pd.NA,
-                "away_score": pd.NA,
-                "status": row.get("status", "Scheduled"),
-                "home_xg": pd.NA,
-                "away_xg": pd.NA,
-                "referee_id": pd.NA,
-                "player_of_the_match_id": pd.NA,
-            }
-        )
-
-    if rows_to_add:
-        matches = pd.concat([matches, pd.DataFrame(rows_to_add)], ignore_index=True)
-
-    return matches
+    return left[all_columns], right[all_columns]
 
 
 def build_live_matches() -> pd.DataFrame:
-    if not MATCHES_PATH.exists():
-        raise FileNotFoundError(f"matches.csv not found: {MATCHES_PATH}")
+    print("Loading World Cup matches...")
+    matches = load_csv(MATCHES_PATH)
 
-    matches = pd.read_csv(MATCHES_PATH)
-    matches = normalize_match_columns(matches)
+    print(f"Raw matches: {len(matches):,}")
 
-    updates = load_csv_if_exists(MANUAL_UPDATES_PATH)
-    bracket = load_csv_if_exists(KNOCKOUT_BRACKET_PATH)
+    print("Loading manual knockout bracket...")
+    bracket = load_csv(BRACKET_PATH)
 
-    print(f"Original matches rows: {len(matches)}")
+    print(f"Bracket helper rows: {len(bracket):,}")
 
-    matches = apply_manual_updates(matches, updates)
-    print(f"After manual updates: {len(matches)} rows")
+    # matches.csv currently contains a stale/incomplete match 89.
+    #
+    # The manually maintained knockout_bracket.csv is the source of truth
+    # for matches 89-104 until the upstream dataset publishes the complete
+    # and correctly mapped knockout schedule.
+    matches = matches[
+        ~matches["match_id"].between(
+            MANUAL_BRACKET_START_MATCH_ID,
+            MANUAL_BRACKET_END_MATCH_ID,
+        )
+    ].copy()
 
-    matches = add_missing_knockout_rows(matches, bracket)
-    print(f"After adding bracket rows: {len(matches)} rows")
+    print(
+        "Removed raw matches "
+        f"{MANUAL_BRACKET_START_MATCH_ID}-"
+        f"{MANUAL_BRACKET_END_MATCH_ID}"
+    )
 
-    matches = matches[BASE_MATCH_COLUMNS].copy()
-    matches = matches.sort_values("match_id").reset_index(drop=True)
+    # Only use the bracket helper rows intended for the manual bracket range.
+    bracket = bracket[
+        bracket["match_id"].between(
+            MANUAL_BRACKET_START_MATCH_ID,
+            MANUAL_BRACKET_END_MATCH_ID,
+        )
+    ].copy()
 
-    PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
-    matches.to_csv(OUTPUT_PATH, index=False)
+    matches, bracket = align_columns(matches, bracket)
 
-    print(f"Saved live matches to: {OUTPUT_PATH}")
+    live_matches = pd.concat(
+        [matches, bracket],
+        ignore_index=True,
+    )
 
-    print("\nStage counts:")
-    print(matches["stage_id"].value_counts().sort_index().to_string())
+    # Safety check: there must only be one row per match.
+    duplicate_match_ids = live_matches[
+        live_matches["match_id"].duplicated(keep=False)
+    ]["match_id"].tolist()
 
-    print("\nStatus counts:")
-    print(matches["status"].value_counts(dropna=False).to_string())
+    if duplicate_match_ids:
+        raise ValueError(
+            "Duplicate match IDs found after building live matches: "
+            f"{sorted(set(duplicate_match_ids))}"
+        )
 
-    print("\nLast 20 rows:")
-    print(matches.tail(20).to_string(index=False))
+    live_matches = (
+        live_matches
+        .sort_values("match_id")
+        .reset_index(drop=True)
+    )
 
-    return matches
+    expected_match_ids = set(range(1, 105))
+    actual_match_ids = set(
+        live_matches["match_id"]
+        .dropna()
+        .astype(int)
+        .tolist()
+    )
+
+    missing_match_ids = sorted(expected_match_ids - actual_match_ids)
+
+    if missing_match_ids:
+        raise ValueError(
+            "Live tournament file is missing match IDs: "
+            f"{missing_match_ids}"
+        )
+
+    PROCESSED_DATA_DIR.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    live_matches.to_csv(
+        OUTPUT_PATH,
+        index=False,
+    )
+
+    print()
+    print("Live matches built successfully.")
+    print(f"Output: {OUTPUT_PATH}")
+    print(f"Rows: {len(live_matches):,}")
+    print()
+
+    if "status" in live_matches.columns:
+        print("STATUS COUNTS")
+        print(
+            live_matches["status"]
+            .value_counts(dropna=False)
+            .to_string()
+        )
+        print()
+
+    if "stage_id" in live_matches.columns:
+        print("STAGE COUNTS")
+        print(
+            live_matches["stage_id"]
+            .value_counts(dropna=False)
+            .sort_index()
+            .to_string()
+        )
+        print()
+
+    print("MATCHES 89-104")
+    print(
+        live_matches[
+            live_matches["match_id"].between(89, 104)
+        ][
+            [
+                "match_id",
+                "stage_id",
+                "stage_name",
+                "home_team_id",
+                "away_team_id",
+                "home_source_match_id",
+                "away_source_match_id",
+                "home_source_type",
+                "away_source_type",
+                "status",
+                "notes",
+            ]
+        ].to_string(index=False)
+    )
+
+    return live_matches
 
 
 if __name__ == "__main__":
