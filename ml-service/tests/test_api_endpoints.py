@@ -57,3 +57,22 @@ def test_tournament_bracket():
     assert "matches" in data
     assert "grouped_by_stage" in data
     assert data["count"] >= 32
+
+
+def test_prediction_history_endpoint():
+    response = client.get(
+        "/api/v1/predictions/history"
+    )
+
+    assert response.status_code == 200
+
+    data = response.json()
+
+    assert "count" in data
+    assert "completed_count" in data
+    assert "correct_count" in data
+    assert "incorrect_count" in data
+    assert "accuracy" in data
+    assert "results" in data
+
+    assert isinstance(data["results"], list)

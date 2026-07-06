@@ -6,7 +6,9 @@ from app.routes.tournament_routes import router as tournament_router
 from app.routes.scorer_routes import router as scorer_router
 from app.routes.ranking_routes import router as ranking_router
 from app.routes.team_routes import router as team_router
-
+from app.routes.prediction_history_routes import (
+    router as prediction_history_router,
+)
 
 app = FastAPI(
     title="World Cup Predictor ML Service",
@@ -27,7 +29,7 @@ app.include_router(tournament_router)
 app.include_router(scorer_router)
 app.include_router(ranking_router)
 app.include_router(team_router)
-
+app.include_router(prediction_history_router)
 
 @app.get("/")
 def root():
@@ -42,3 +44,4 @@ def health_check():
     return {
         "status": "healthy",
     }
+

@@ -196,3 +196,42 @@ export type BracketResponse = {
     matches: BracketMatch[];
     grouped_by_stage: Record<string, BracketMatch[]>;
 };
+
+export type KnockoutPredictionHistoryItem = {
+    match_id: number;
+    stage_id: number;
+    stage_name: string;
+
+    home_team: string;
+    away_team: string;
+
+    predicted_result: "HOME_WIN" | "DRAW" | "AWAY_WIN";
+    predicted_winner: string;
+    prediction_probability: number;
+
+    home_win_probability: number;
+    draw_probability: number;
+    away_win_probability: number;
+
+    predicted_scoreline: string | null;
+    predicted_home_score: number | null;
+    predicted_away_score: number | null;
+
+    predicted_at: string;
+
+    actual_home_score: number | null;
+    actual_away_score: number | null;
+    actual_winner: string | null;
+
+    prediction_correct: boolean | null;
+    result_updated_at: string | null;
+};
+
+export type PredictionHistoryResponse = {
+    count: number;
+    completed_count: number;
+    correct_count: number;
+    incorrect_count: number;
+    accuracy: number | null;
+    results: KnockoutPredictionHistoryItem[];
+};
