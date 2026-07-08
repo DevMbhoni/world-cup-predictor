@@ -1,16 +1,12 @@
 team_id,team,status,winner_probability,final_probability,semi_final_probability,quarter_final_probability,round_of_16_probability,round_of_32_probability
-37,Argentina,Active,0.253,0.387,0.568,0.803,1.0,1.0
-45,England,Active,0.165,0.302,0.684,1.0,1.0,1.0
-33,France,Active,0.142,0.322,0.624,1.0,1.0,1.0
-29,Spain,Active,0.142,0.267,0.423,0.611,1.0,1.0
-44,Colombia,Active,0.058,0.117,0.211,0.568,1.0,1.0
-10,Morocco,Active,0.054,0.149,0.376,1.0,1.0,1.0
-25,Belgium,Active,0.052,0.139,0.277,0.728,1.0,1.0
-41,Portugal,Active,0.046,0.096,0.217,0.389,1.0,1.0
-36,Norway,Active,0.043,0.106,0.316,1.0,1.0,1.0
-8,Switzerland,Active,0.035,0.073,0.162,0.432,1.0,1.0
-13,USA,Active,0.006,0.027,0.083,0.272,1.0,1.0
-26,Egypt,Active,0.004,0.015,0.059,0.197,1.0,1.0
+37,Argentina,Active,0.317,0.476,0.698,1.0,1.0,1.0
+29,Spain,Active,0.196,0.384,0.612,1.0,1.0,1.0
+45,England,Active,0.156,0.3,0.66,1.0,1.0,1.0
+33,France,Active,0.126,0.288,0.612,1.0,1.0,1.0
+25,Belgium,Active,0.072,0.184,0.388,1.0,1.0,1.0
+8,Switzerland,Active,0.051,0.13,0.302,1.0,1.0,1.0
+10,Morocco,Active,0.049,0.144,0.388,1.0,1.0,1.0
+36,Norway,Active,0.033,0.094,0.34,1.0,1.0,1.0
 1,Mexico,Eliminated,0.0,0.0,0.0,0.0,1.0,1.0
 2,South Africa,Eliminated,0.0,0.0,0.0,0.0,0.0,1.0
 3,South Korea,Not qualified for knockouts,0.0,0.0,0.0,0.0,0.0,0.0
@@ -21,6 +17,7 @@ team_id,team,status,winner_probability,final_probability,semi_final_probability,
 9,Brazil,Eliminated,0.0,0.0,0.0,0.0,1.0,1.0
 11,Haiti,Not qualified for knockouts,0.0,0.0,0.0,0.0,0.0,0.0
 12,Scotland,Not qualified for knockouts,0.0,0.0,0.0,0.0,0.0,0.0
+13,USA,Eliminated,0.0,0.0,0.0,0.0,1.0,1.0
 14,Paraguay,Eliminated,0.0,0.0,0.0,0.0,1.0,1.0
 15,Australia,Eliminated,0.0,0.0,0.0,0.0,0.0,1.0
 16,Türkiye,Not qualified for knockouts,0.0,0.0,0.0,0.0,0.0,0.0
@@ -32,6 +29,7 @@ team_id,team,status,winner_probability,final_probability,semi_final_probability,
 22,Japan,Eliminated,0.0,0.0,0.0,0.0,0.0,1.0
 23,Sweden,Eliminated,0.0,0.0,0.0,0.0,0.0,1.0
 24,Tunisia,Not qualified for knockouts,0.0,0.0,0.0,0.0,0.0,0.0
+26,Egypt,Eliminated,0.0,0.0,0.0,0.0,1.0,1.0
 27,IR Iran,Not qualified for knockouts,0.0,0.0,0.0,0.0,0.0,0.0
 28,New Zealand,Not qualified for knockouts,0.0,0.0,0.0,0.0,0.0,0.0
 30,Cabo Verde,Eliminated,0.0,0.0,0.0,0.0,0.0,1.0
@@ -42,8 +40,10 @@ team_id,team,status,winner_probability,final_probability,semi_final_probability,
 38,Algeria,Eliminated,0.0,0.0,0.0,0.0,0.0,1.0
 39,Austria,Eliminated,0.0,0.0,0.0,0.0,0.0,1.0
 40,Jordan,Not qualified for knockouts,0.0,0.0,0.0,0.0,0.0,0.0
+41,Portugal,Eliminated,0.0,0.0,0.0,0.0,1.0,1.0
 42,Congo DR,Eliminated,0.0,0.0,0.0,0.0,0.0,1.0
 43,Uzbekistan,Not qualified for knockouts,0.0,0.0,0.0,0.0,0.0,0.0
+44,Colombia,Eliminated,0.0,0.0,0.0,0.0,1.0,1.0
 46,Croatia,Eliminated,0.0,0.0,0.0,0.0,0.0,1.0
 47,Ghana,Eliminated,0.0,0.0,0.0,0.0,0.0,1.0
 48,Panama,Not qualified for knockouts,0.0,0.0,0.0,0.0,0.0,0.0

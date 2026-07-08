@@ -41,6 +41,73 @@ HISTORY_PATH = (
 )
 
 
+STRING_COLUMNS = [
+    "actual_winner",
+    "result_updated_at",
+]
+
+BOOLEAN_COLUMNS = [
+    "prediction_correct",
+]
+
+NUMERIC_RESULT_COLUMNS = [
+    "actual_home_score",
+    "actual_away_score",
+]
+
+
+def prepare_history_dtypes(
+    history: pd.DataFrame,
+) -> pd.DataFrame:
+    """
+    Ensure prediction result columns can safely receive
+    strings, booleans and nullable numeric values.
+
+    Empty CSV columns may otherwise be inferred as float64.
+    """
+
+    history = history.copy()
+
+    for column in STRING_COLUMNS:
+        if column not in history.columns:
+            history[column] = pd.Series(
+                pd.NA,
+                index=history.index,
+                dtype="object",
+            )
+        else:
+            history[column] = history[column].astype(
+                "object"
+            )
+
+    for column in BOOLEAN_COLUMNS:
+        if column not in history.columns:
+            history[column] = pd.Series(
+                pd.NA,
+                index=history.index,
+                dtype="boolean",
+            )
+        else:
+            history[column] = history[column].astype(
+                "boolean"
+            )
+
+    for column in NUMERIC_RESULT_COLUMNS:
+        if column not in history.columns:
+            history[column] = pd.Series(
+                pd.NA,
+                index=history.index,
+                dtype="Int64",
+            )
+        else:
+            history[column] = pd.to_numeric(
+                history[column],
+                errors="coerce",
+            ).astype("Int64")
+
+    return history
+
+
 def main() -> None:
     if not HISTORY_PATH.exists():
         print(
@@ -53,6 +120,9 @@ def main() -> None:
         return
 
     history = pd.read_csv(HISTORY_PATH)
+
+    history = prepare_history_dtypes(history)
+
     matches = pd.read_csv(LIVE_MATCHES_PATH)
     teams = pd.read_csv(TEAMS_PATH)
 
@@ -94,27 +164,36 @@ def main() -> None:
         if match is None:
             continue
 
-        if str(match.get("status", "")).lower() != "completed":
+        if (
+            str(match.get("status", "")).lower()
+            != "completed"
+        ):
             continue
 
         home_score = match.get("home_score")
         away_score = match.get("away_score")
 
-        if pd.isna(home_score) or pd.isna(away_score):
+        if (
+            pd.isna(home_score)
+            or pd.isna(away_score)
+        ):
             continue
 
         if match_id in manual_winner_map:
             actual_winner_id = manual_winner_map[
                 match_id
             ]
+
         elif home_score > away_score:
             actual_winner_id = int(
                 match["home_team_id"]
             )
+
         elif away_score > home_score:
             actual_winner_id = int(
                 match["away_team_id"]
             )
+
         else:
             actual_winner_id = None
 
@@ -126,6 +205,10 @@ def main() -> None:
 
         predicted_winner = str(
             prediction["predicted_winner"]
+        )
+
+        prediction_correct = (
+            predicted_winner == actual_winner
         )
 
         history.at[
@@ -146,7 +229,7 @@ def main() -> None:
         history.at[
             index,
             "prediction_correct",
-        ] = predicted_winner == actual_winner
+        ] = prediction_correct
 
         history.at[
             index,
@@ -157,11 +240,19 @@ def main() -> None:
 
         updated += 1
 
+        print(
+            f"M{match_id}: "
+            f"predicted={predicted_winner} | "
+            f"actual={actual_winner} | "
+            f"correct={prediction_correct}"
+        )
+
     history.to_csv(
         HISTORY_PATH,
         index=False,
     )
 
+    print()
     print(
         f"Updated {updated} completed "
         "prediction results."
@@ -172,11 +263,10 @@ def main() -> None:
     ].copy()
 
     if not completed.empty:
-        correct = (
+        correct = int(
             completed["prediction_correct"]
-            .astype(str)
-            .str.lower()
-            .eq("true")
+            .fillna(False)
+            .astype(bool)
             .sum()
         )
 
@@ -186,9 +276,20 @@ def main() -> None:
 
         print()
         print("PREDICTION PERFORMANCE")
-        print(f"Completed predictions: {len(completed)}")
-        print(f"Correct predictions: {correct}")
-        print(f"Accuracy: {accuracy:.2f}%")
+        print(
+            f"Completed predictions: "
+            f"{len(completed)}"
+        )
+        print(
+            f"Correct predictions: {correct}"
+        )
+        print(
+            f"Incorrect predictions: "
+            f"{len(completed) - correct}"
+        )
+        print(
+            f"Accuracy: {accuracy:.2f}%"
+        )
 
 
 if __name__ == "__main__":
