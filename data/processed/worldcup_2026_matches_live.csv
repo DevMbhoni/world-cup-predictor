@@ -95,10 +95,10 @@ match_id,date,kickoff_time_utc,stage_id,venue_id,home_team_id,away_team_id,home_
 94,2026-07-07,00:00,3,15.0,13.0,25.0,1.0,4.0,,,Completed,Regular,0.67,2.15,9,641.0,Round of 16,82,81,winner,winner,Winner match 82 vs Winner match 81
 95,2026-07-07,16:00,3,12.0,37.0,26.0,3.0,2.0,,,Completed,Regular,2.12,1.54,1,946.0,Round of 16,87,86,winner,winner,Winner match 87 vs Winner match 86
 96,2026-07-07,20:00,3,16.0,8.0,44.0,0.0,0.0,4.0,3.0,Completed,Penalties,1.15,1.46,10,183.0,Round of 16,85,88,winner,winner,Winner match 85 vs Winner match 88
-97,2026-07-09,20:00,4,10.0,33.0,10.0,,,,,Scheduled,,,,1,,Quarter-finals,89,90,winner,winner,Winner match 89 vs Winner match 90
-98,2026-07-10,19:00,4,3.0,,,,,,,Scheduled,,,,2,,Quarter-finals,93,94,winner,winner,Winner match 93 vs Winner match 94
+97,2026-07-09,20:00,4,10.0,33.0,10.0,2.0,0.0,,,Completed,Regular,3.1,0.13,16,842.0,Quarter-finals,89,90,winner,winner,Winner match 89 vs Winner match 90
+98,2026-07-10,19:00,4,3.0,29.0,25.0,,,,,Scheduled,,,,2,,Quarter-finals,93,94,winner,winner,Winner match 93 vs Winner match 94
 99,2026-07-11,21:00,4,13.0,36.0,45.0,,,,,Scheduled,,,,3,,Quarter-finals,91,92,winner,winner,Winner match 91 vs Winner match 92
-100,2026-07-12,01:00,4,12.0,,,,,,,Scheduled,,,,4,,Quarter-finals,95,96,winner,winner,Winner match 95 vs Winner match 96
+100,2026-07-12,01:00,4,12.0,37.0,8.0,,,,,Scheduled,,,,4,,Quarter-finals,95,96,winner,winner,Winner match 95 vs Winner match 96
 101,2026-07-14,20:00,5,4.0,,,,,,,Scheduled,,,,5,,Semi-finals,97,98,winner,winner,Winner match 97 vs Winner match 98
 102,2026-07-15,20:00,5,9.0,,,,,,,Scheduled,,,,6,,Semi-finals,99,100,winner,winner,Winner match 99 vs Winner match 100
 103,2026-07-18,22:00,6,13.0,,,,,,,Scheduled,,,,7,,Third-place match,101,102,loser,loser,Loser match 101 vs Loser match 102
