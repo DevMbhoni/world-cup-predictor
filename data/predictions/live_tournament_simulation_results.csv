@@ -1,11 +1,8 @@
 team_id,team,status,winner_probability,final_probability,semi_final_probability,quarter_final_probability,round_of_16_probability,round_of_32_probability
-37,Argentina,Active,0.305,0.474,0.691,1.0,1.0,1.0
-33,France,Active,0.194,0.461,1.0,1.0,1.0,1.0
-29,Spain,Active,0.194,0.392,0.637,1.0,1.0,1.0
-45,England,Active,0.167,0.308,0.712,1.0,1.0,1.0
-8,Switzerland,Active,0.054,0.143,0.309,1.0,1.0,1.0
-25,Belgium,Active,0.052,0.147,0.363,1.0,1.0,1.0
-36,Norway,Active,0.034,0.075,0.288,1.0,1.0,1.0
+37,Argentina,Active,0.402,0.657,1.0,1.0,1.0,1.0
+29,Spain,Active,0.262,0.584,1.0,1.0,1.0,1.0
+45,England,Active,0.169,0.343,1.0,1.0,1.0,1.0
+33,France,Active,0.167,0.416,1.0,1.0,1.0,1.0
 1,Mexico,Eliminated,0.0,0.0,0.0,0.0,1.0,1.0
 2,South Africa,Eliminated,0.0,0.0,0.0,0.0,0.0,1.0
 3,South Korea,Not qualified for knockouts,0.0,0.0,0.0,0.0,0.0,0.0
@@ -13,6 +10,7 @@ team_id,team,status,winner_probability,final_probability,semi_final_probability,
 5,Canada,Eliminated,0.0,0.0,0.0,0.0,1.0,1.0
 6,Bosnia and Herzegovina,Eliminated,0.0,0.0,0.0,0.0,0.0,1.0
 7,Qatar,Not qualified for knockouts,0.0,0.0,0.0,0.0,0.0,0.0
+8,Switzerland,Eliminated,0.0,0.0,0.0,1.0,1.0,1.0
 9,Brazil,Eliminated,0.0,0.0,0.0,0.0,1.0,1.0
 10,Morocco,Eliminated,0.0,0.0,0.0,1.0,1.0,1.0
 11,Haiti,Not qualified for knockouts,0.0,0.0,0.0,0.0,0.0,0.0
@@ -29,6 +27,7 @@ team_id,team,status,winner_probability,final_probability,semi_final_probability,
 22,Japan,Eliminated,0.0,0.0,0.0,0.0,0.0,1.0
 23,Sweden,Eliminated,0.0,0.0,0.0,0.0,0.0,1.0
 24,Tunisia,Not qualified for knockouts,0.0,0.0,0.0,0.0,0.0,0.0
+25,Belgium,Eliminated,0.0,0.0,0.0,1.0,1.0,1.0
 26,Egypt,Eliminated,0.0,0.0,0.0,0.0,1.0,1.0
 27,IR Iran,Not qualified for knockouts,0.0,0.0,0.0,0.0,0.0,0.0
 28,New Zealand,Not qualified for knockouts,0.0,0.0,0.0,0.0,0.0,0.0
@@ -37,6 +36,7 @@ team_id,team,status,winner_probability,final_probability,semi_final_probability,
 32,Uruguay,Not qualified for knockouts,0.0,0.0,0.0,0.0,0.0,0.0
 34,Senegal,Eliminated,0.0,0.0,0.0,0.0,0.0,1.0
 35,Iraq,Not qualified for knockouts,0.0,0.0,0.0,0.0,0.0,0.0
+36,Norway,Eliminated,0.0,0.0,0.0,1.0,1.0,1.0
 38,Algeria,Eliminated,0.0,0.0,0.0,0.0,0.0,1.0
 39,Austria,Eliminated,0.0,0.0,0.0,0.0,0.0,1.0
 40,Jordan,Not qualified for knockouts,0.0,0.0,0.0,0.0,0.0,0.0
