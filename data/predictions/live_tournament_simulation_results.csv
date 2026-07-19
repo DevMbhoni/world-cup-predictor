@@ -1,8 +1,8 @@
 team_id,team,status,winner_probability,final_probability,semi_final_probability,quarter_final_probability,round_of_16_probability,round_of_32_probability
-37,Argentina,Active,0.402,0.657,1.0,1.0,1.0,1.0
-29,Spain,Active,0.262,0.584,1.0,1.0,1.0,1.0
-45,England,Active,0.169,0.343,1.0,1.0,1.0,1.0
-33,France,Active,0.167,0.416,1.0,1.0,1.0,1.0
+37,Argentina,Active,0.533,1.0,1.0,1.0,1.0,1.0
+29,Spain,Active,0.467,1.0,1.0,1.0,1.0,1.0
+33,France,Eliminated,0.0,0.0,1.0,1.0,1.0,1.0
+45,England,Eliminated,0.0,0.0,1.0,1.0,1.0,1.0
 1,Mexico,Eliminated,0.0,0.0,0.0,0.0,1.0,1.0
 2,South Africa,Eliminated,0.0,0.0,0.0,0.0,0.0,1.0
 3,South Korea,Not qualified for knockouts,0.0,0.0,0.0,0.0,0.0,0.0

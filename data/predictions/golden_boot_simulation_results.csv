@@ -1,14 +1,15 @@
 player_id,player_name,team_id,team_name,position,current_goals,expected_final_goals,golden_boot_probability,top_3_probability,scoring_weight,minutes_played,matches_started,shots,shots_on_target
-946,Lionel Andrés Messi,37,Argentina,FWD,8,8.7418,0.529,0.9998,37.95627600806399,530,5,0.0,0.0
-842,Kylian Mbappe,33,France,FWD,8,8.5676,0.4478,0.9994,38.213694396397536,518,6,0.0,0.0
-1154,Jude Victor William Bellingham,45,England,MID,6,6.4302,0.0108,0.0636,28.52097728269723,519,6,0.0,0.0
-1153,Harry Edward Kane,45,England,FWD,6,6.4412,0.0106,0.0722,29.532851633528587,564,6,0.0,0.0
-839,Masour Ousmane Dembele,33,France,FWD,5,5.3894,0.0018,0.0494,25.851411425006244,378,5,0.0,0.0
-919,Erling Braut Haaland,36,Norway,FWD,7,7.0,0.0,0.8024,34.11291067918313,465,5,0.0,0.0
-749,Mikel Oyarzabal,29,Spain,FWD,4,4.4702,0.0,0.0132,21.16191781602623,471,6,0.0,0.0
+842,Kylian Mbappe,33,France,FWD,10,10.0,0.9794,1.0,46.06284973265889,698,8,0.0,0.0
+946,Lionel Andrés Messi,37,Argentina,FWD,8,8.3106,0.0206,1.0,37.68428516668787,620,6,0.0,0.0
+919,Erling Braut Haaland,36,Norway,FWD,7,7.0,0.0,0.9798,34.11291067918313,465,5,0.0,0.0
+1154,Jude Victor William Bellingham,45,England,MID,7,7.0,0.0,0.0,32.359477189465835,620,7,0.0,0.0
+839,Masour Ousmane Dembele,33,France,FWD,6,6.0,0.0,0.0,29.50178736485587,513,6,0.0,0.0
+1153,Harry Edward Kane,45,England,FWD,6,6.0,0.0,0.0,29.33521353085437,654,7,0.0,0.0
+749,Mikel Oyarzabal,29,Spain,FWD,5,5.2066,0.0,0.0202,25.253953110831347,545,7,0.0,0.0
 16,Julián Andrés Quinones,1,Mexico,FWD,4,4.0,0.0,0.0,21.216774850875115,414,5,0.0,0.0
 215,José Vinicius,9,Brazil,FWD,4,4.0,0.0,0.0,21.19947467463769,441,5,0.0,0.0
 876,Ismaila Sarr,34,Senegal,FWD,4,4.0,0.0,0.0,21.53193322124898,366,4,0.0,0.0
+958,Lautaro Javier Martinez,37,Argentina,FWD,3,3.1266,0.0,0.0,16.95776248557793,310,4,0.0,0.0
 9,Raúl Alonso Jimenez,1,Mexico,FWD,3,3.0,0.0,0.0,17.319256518347114,319,4,0.0,0.0
 114,Jonathan Christian David,5,Canada,FWD,3,3.0,0.0,0.0,17.000219396521928,421,5,0.0,0.0
 191,Johan Kula Manzambi,8,Switzerland,MID,3,3.0,0.0,0.0,16.365680475159465,198,2,0.0,0.0
@@ -22,12 +23,13 @@ player_id,player_name,team_id,team_name,position,current_goals,expected_final_go
 633,Romelu Lukaku,25,Belgium,FWD,3,3.0,0.0,0.0,16.999650162016387,229,1,0.0,0.0
 641,Charles Marc De Ketelaere,25,Belgium,FWD,3,3.0,0.0,0.0,17.093573468288906,354,5,0.0,0.0
 713,Elijah Henry Just,28,New Zealand,MID,3,3.0,0.0,0.0,16.323865266105116,265,3,0.0,0.0
+844,Bradley Jean-Manuel Essolisa Barcola,33,France,FWD,3,3.0,0.0,0.0,16.651838606277433,323,3,0.0,0.0
 1047,Ronaldo Cristiano Ronaldo,41,Portugal,FWD,3,3.0,0.0,0.0,16.998137521690968,441,5,0.0,0.0
 1086,Yoane Wissa,42,Congo DR,FWD,3,3.0,0.0,0.0,17.101485813242412,360,4,0.0,0.0
-734,Mikel Merino,29,Spain,MID,2,2.2624,0.0,0.0,11.608505368063168,137,1,0.0,0.0
-958,Lautaro Javier Martinez,37,Argentina,FWD,2,2.2412,0.0,0.0,12.643558934690208,301,4,0.0,0.0
-945,Julián Alvarez,37,Argentina,FWD,2,2.2282,0.0,0.0,12.212987168608118,410,3,0.0,0.0
-844,Bradley Jean-Manuel Essolisa Barcola,33,France,FWD,2,2.1876,0.0,0.0,12.591116665679333,221,2,0.0,0.0
+1151,Bukayo Ayoyinka Saka,45,England,FWD,3,3.0,0.0,0.0,16.615042032704395,358,3,0.0,0.0
+945,Julián Alvarez,37,Argentina,FWD,2,2.0942,0.0,0.0,12.165879154670835,500,4,0.0,0.0
+734,Mikel Merino,29,Spain,MID,2,2.0906,0.0,0.0,11.584695844253645,149,1,0.0,0.0
+740,Pedro Antonio Porro,29,Spain,DEF,2,2.0812,0.0,0.0,10.816581107471418,444,5,0.0,0.0
 113,Cyle Christopher Larin,5,Canada,FWD,2,2.0,0.0,0.0,13.131140705317545,162,2,0.0,0.0
 156,Ermin Mahmic,6,Bosnia and Herzegovina,MID,2,2.0,0.0,0.0,11.104886929909382,67,0,0.0,0.0
 189,Breel Donald Embolo,8,Switzerland,FWD,2,2.0,0.0,0.0,12.552726216132248,506,6,0.0,0.0
@@ -54,16 +56,14 @@ player_id,player_name,team_id,team_name,position,current_goals,expected_final_go
 969,Riyad Karim Mahrez,38,Algeria,FWD,2,2.0,0.0,0.0,12.706099525283825,282,3,0.0,0.0
 995,Marko Arnautovic,39,Austria,FWD,2,2.0,0.0,0.0,12.722768311816038,143,1,0.0,0.0
 1120,Daniel Munoz,44,Colombia,DEF,2,2.0,0.0,0.0,10.706944336419939,393,4,0.0,0.0
-747,Lamine Yamal Yamal,29,Spain,FWD,1,1.172,0.0,0.0,8.194065715065108,406,5,0.0,0.0
-743,Alejandro Baena,29,Spain,MID,1,1.1628,0.0,0.0,7.280902679435484,328,5,0.0,0.0
-736,Fabian Ruiz,29,Spain,MID,1,1.1556,0.0,0.0,6.989189966555582,183,2,0.0,0.0
-956,Alexis Mac Allister,37,Argentina,MID,1,1.1482,0.0,0.0,7.015589646777938,540,5,0.0,0.0
-947,Giovani Lo Celso,37,Argentina,MID,1,1.148,0.0,0.0,7.623358705399853,60,1,0.0,0.0
-740,Pedro Antonio Porro,29,Spain,DEF,1,1.1456,0.0,0.0,6.583472999363311,360,4,0.0,0.0
-949,Cristian Gabriel Romero,37,Argentina,DEF,1,1.1296,0.0,0.0,6.561182842254125,452,5,0.0,0.0
-1155,Marcus Rashford,45,England,FWD,1,1.1248,0.0,0.0,8.294500808939462,175,2,0.0,0.0
-942,Lisandro Martinez,37,Argentina,DEF,1,1.1198,0.0,0.0,6.476977274369043,510,5,0.0,0.0
-852,Désiré Nonka-Maho Doue,33,France,FWD,1,1.1148,0.0,0.0,7.983815584323279,291,3,0.0,0.0
+747,Lamine Yamal Yamal,29,Spain,FWD,1,1.067,0.0,0.0,8.157540342958534,496,6,0.0,0.0
+947,Giovani Lo Celso,37,Argentina,MID,1,1.0598,0.0,0.0,7.623358705399853,60,1,0.0,0.0
+956,Alexis Mac Allister,37,Argentina,MID,1,1.0578,0.0,0.0,7.003684884873176,630,6,0.0,0.0
+736,Fabian Ruiz,29,Spain,MID,1,1.0568,0.0,0.0,6.863964523071235,261,3,0.0,0.0
+960,Enzo Jeremías Fernandez,37,Argentina,MID,1,1.056,0.0,0.0,7.172190085552845,570,6,0.0,0.0
+942,Lisandro Martinez,37,Argentina,DEF,1,1.0524,0.0,0.0,6.4442301549027,582,6,0.0,0.0
+743,Alejandro Baena,29,Spain,MID,1,1.0516,0.0,0.0,7.196987216494446,412,6,0.0,0.0
+949,Cristian Gabriel Romero,37,Argentina,DEF,1,1.0478,0.0,0.0,6.5115877666573505,542,6,0.0,0.0
 7,Luis Francisco Romo,1,Mexico,MID,1,1.0,0.0,0.0,7.3890001311301114,268,4,0.0,0.0
 8,Álvaro Fidalgo,1,Mexico,MID,1,1.0,0.0,0.0,6.774094897266541,95,1,0.0,0.0
 20,Mateo Chavez,1,Mexico,DEF,1,1.0,0.0,0.0,6.861013681747673,78,1,0.0,0.0
@@ -138,6 +138,7 @@ player_id,player_name,team_id,team_name,position,current_goals,expected_final_go
 780,Sandro Helio Varela,30,Cabo Verde,MID,1,1.0,0.0,0.0,6.489644347399694,101,0,0.0,0.0
 784,Ali Abdulelah Alamri,31,Saudi Arabia,DEF,1,1.0,0.0,0.0,6.720419513835758,240,3,0.0,0.0
 820,Agustin Canobbio,32,Uruguay,MID,1,1.0,0.0,0.0,7.026950424860185,224,2,0.0,0.0
+852,Désiré Nonka-Maho Doue,33,France,FWD,1,1.0,0.0,0.0,7.857180288515241,369,4,0.0,0.0
 871,Iliman Cheikh Baroy Ndiaye,34,Senegal,FWD,1,1.0,0.0,0.0,8.097143093043961,114,1,0.0,0.0
 878,Ibrahim Mbaye,34,Senegal,FWD,1,1.0,0.0,0.0,7.893864267515313,154,1,0.0,0.0
 902,Hussein Ghadhban Aymen,35,Iraq,FWD,1,1.0,0.0,0.0,8.751132352963447,116,2,0.0,0.0
@@ -166,6 +167,10 @@ player_id,player_name,team_id,team_name,position,current_goals,expected_final_go
 1125,Luis Fernando Diaz,44,Colombia,FWD,1,1.0,0.0,0.0,8.336810010558604,480,5,0.0,0.0
 1129,Jhon Adolfo Arias,44,Colombia,MID,1,1.0,0.0,0.0,7.229514632607277,382,5,0.0,0.0
 1139,Jaminton Leandro Campaz,44,Colombia,FWD,1,1.0,0.0,0.0,7.569602885263874,75,0,0.0,0.0
+1146,Ezri Ngoyo Konsa,45,England,DEF,1,1.0,0.0,0.0,6.271114330054731,647,7,0.0,0.0
+1148,Declan Rice,45,England,MID,1,1.0,0.0,0.0,7.23102182480924,559,7,0.0,0.0
+1155,Marcus Rashford,45,England,FWD,1,1.0,0.0,0.0,8.258137172575825,220,3,0.0,0.0
+1162,Anthony Michael Gordon,45,England,FWD,1,1.0,0.0,0.0,8.133991042080988,400,5,0.0,0.0
 1181,Ante Budimir,46,Croatia,FWD,1,1.0,0.0,0.0,8.303556811648567,155,2,0.0,0.0
 1183,Nikola Vlasic,46,Croatia,MID,1,1.0,0.0,0.0,7.255867794086124,190,2,0.0,0.0
 1184,Ivan Perisic,46,Croatia,FWD,1,1.0,0.0,0.0,8.338901798503612,360,4,0.0,0.0
@@ -174,78 +179,38 @@ player_id,player_name,team_id,team_name,position,current_goals,expected_final_go
 1196,Petar Musa,46,Croatia,FWD,1,1.0,0.0,0.0,8.607212640240348,112,2,0.0,0.0
 1199,Caleb Marfo Yirenkyi,47,Ghana,MID,1,1.0,0.0,0.0,7.011283414998892,264,3,0.0,0.0
 1219,Derrick Luckassen,47,Ghana,DEF,1,1.0,0.0,0.0,6.605365092368444,180,2,0.0,0.0
-738,Daniel Olmo,29,Spain,FWD,0,0.08,0.0,0.0,3.7263429747289174,341,4,0.0,0.0
-953,Giuliano Simeone,37,Argentina,FWD,0,0.0752,0.0,0.0,3.911300187852349,71,1,0.0,0.0
-735,Ferran Torres,29,Spain,FWD,0,0.074,0.0,0.0,3.218616354393863,208,1,0.0,0.0
-952,Thiago Ezequiel Almada,37,Argentina,FWD,0,0.0704,0.0,0.0,3.4921721736610194,242,3,0.0,0.0
-753,Victor Munoz,29,Spain,FWD,0,0.0676,0.0,0.0,2.828403909837654,0,0,0.0,0.0
-744,Rodrigo Rodri,29,Spain,MID,0,0.0672,0.0,0.0,2.95177441228174,537,6,0.0,0.0
-843,Michael Akpovie Olise,33,France,FWD,0,0.066,0.0,0.0,3.988600952682403,488,6,0.0,0.0
-739,Yeremy Jesús Pino,29,Spain,FWD,0,0.0656,0.0,0.0,2.9654809064315364,68,0,0.0,0.0
-745,Nicholas Williams,29,Spain,FWD,0,0.0656,0.0,0.0,2.990400766452833,57,0,0.0,0.0
-954,Nicolas Paz,37,Argentina,FWD,0,0.0628,0.0,0.0,3.424942056906771,70,1,0.0,0.0
-1164,Azuka Tristan Madueke,45,England,FWD,0,0.061,0.0,0.0,3.690660614050031,287,4,0.0,0.0
-754,Borja Iglesias,29,Spain,FWD,0,0.0596,0.0,0.0,2.8858278947872167,1,0,0.0,0.0
-943,Rodrigo Javier De Paul,37,Argentina,MID,0,0.0596,0.0,0.0,2.9172736279388953,407,5,0.0,0.0
-748,Pedro Pedri,29,Spain,MID,0,0.0594,0.0,0.0,2.7872751769379063,429,5,0.0,0.0
-1162,Anthony Michael Gordon,45,England,FWD,0,0.059,0.0,0.0,3.763157708747655,328,4,0.0,0.0
-737,Pablo Gavi,29,Spain,MID,0,0.0564,0.0,0.0,2.3659271911423687,76,1,0.0,0.0
-957,Jose Manuel Alberto Lopez,37,Argentina,FWD,0,0.0556,0.0,0.0,2.824716214451543,18,0,0.0,0.0
-1151,Bukayo Ayoyinka Saka,45,England,FWD,0,0.0556,0.0,0.0,3.388519021265184,268,2,0.0,0.0
-960,Enzo Jeremías Fernandez,37,Argentina,MID,0,0.0554,0.0,0.0,2.935347980289687,480,5,0.0,0.0
-950,Exequiel Alejandro Palacios,37,Argentina,MID,0,0.0532,0.0,0.0,2.8784612222496433,90,1,0.0,0.0
-742,Aymeric Laporte,29,Spain,DEF,0,0.0498,0.0,0.0,2.2748771726019497,540,6,0.0,0.0
-941,Leandro Daniel Paredes,37,Argentina,MID,0,0.0494,0.0,0.0,2.4655346529511015,334,3,0.0,0.0
-752,Marc Cucurella,29,Spain,DEF,0,0.0492,0.0,0.0,2.2309079153249867,540,6,0.0,0.0
-1148,Declan Rice,45,England,MID,0,0.0488,0.0,0.0,2.989519141446091,387,5,0.0,0.0
-840,Aurélien Djani Tchouameni,33,France,MID,0,0.0478,0.0,0.0,2.932256313444605,360,4,0.0,0.0
-750,Pau Cubarsi,29,Spain,DEF,0,0.047,0.0,0.0,2.171278429031158,540,6,0.0,0.0
-838,Emmanuel Boris Kone,33,France,MID,0,0.047,0.0,0.0,2.8327222011540614,360,4,0.0,0.0
-1163,George Arthur Watkins,45,England,FWD,0,0.0454,0.0,0.0,2.926949714964295,6,0,0.0,0.0
-733,Marcos Llorente,29,Spain,DEF,0,0.0432,0.0,0.0,2.2259244102510385,180,2,0.0,0.0
-962,Nahuel Molina,37,Argentina,DEF,0,0.043,0.0,0.0,2.106546615344232,396,4,0.0,0.0
-1166,Ivan Benjamin Elijah Toney,45,England,FWD,0,0.0422,0.0,0.0,2.848227681447628,0,0,0.0,0.0
-850,Warren Marie Jean-Pierre Zaire-Emery,33,France,MID,0,0.0412,0.0,0.0,2.826694020188566,90,1,0.0,0.0
-854,Jean-Philippe Mateta,33,France,FWD,0,0.0404,0.0,0.0,2.817423351913119,22,0,0.0,0.0
-841,Marcus Lilian Thuram,33,France,FWD,0,0.0402,0.0,0.0,3.0036860440957422,1,0,0.0,0.0
-938,Marcos Nicolás Senesi,37,Argentina,DEF,0,0.0396,0.0,0.0,2.1014270023380224,90,1,0.0,0.0
-846,Adrien Thibault Marie Rabiot,33,France,MID,0,0.0392,0.0,0.0,2.8971052039905043,360,4,0.0,0.0
-1152,Elliot Junior Anderson,45,England,MID,0,0.0384,0.0,0.0,2.8171515692172266,533,6,0.0,0.0
-836,Dayotchanculle Oswald Upamecano,33,France,DEF,0,0.0378,0.0,0.0,2.257670588901089,526,6,0.0,0.0
-951,Nicolas Ivan Gonzalez,37,Argentina,MID,0,0.0376,0.0,0.0,1.8938854753552552,184,0,0.0,0.0
-746,Martin Zubimendi,29,Spain,MID,0,0.0366,0.0,0.0,1.889309567176311,0,0,0.0,0.0
-961,Facundo Axel Medina,37,Argentina,DEF,0,0.0362,0.0,0.0,1.8500669166805093,258,3,0.0,0.0
-837,Jules Olivier Kounde,33,France,DEF,0,0.0352,0.0,0.0,2.2693560459083733,514,6,0.0,0.0
-1146,Ezri Ngoyo Konsa,45,England,DEF,0,0.0352,0.0,0.0,2.1874589977517935,539,6,0.0,0.0
-939,Nicolás Alejandro Tagliafico,37,Argentina,DEF,0,0.0332,0.0,0.0,1.7955766405116602,277,3,0.0,0.0
-835,Lucas Digne,33,France,DEF,0,0.033,0.0,0.0,2.190493803266817,258,3,0.0,0.0
-944,Valentin Barco,37,Argentina,MID,0,0.032,0.0,0.0,1.7289306344778563,19,0,0.0,0.0
-1170,Jarell Amorin Quansah,45,England,DEF,0,0.0314,0.0,0.0,2.055790471687864,117,2,0.0,0.0
-1150,Keaninkin Marc-Isreal Guehi,45,England,DEF,0,0.03,0.0,0.0,2.0311470732015797,483,5,0.0,0.0
-1161,Morgan Elliot Rogers,45,England,MID,0,0.0298,0.0,0.0,2.0592698771007236,156,1,0.0,0.0
-856,Mathis Rayan Cherki,33,France,MID,0,0.0294,0.0,0.0,2.008390775763124,145,1,0.0,0.0
-955,Nicolas Hernan Gonzalo Otamendi,37,Argentina,DEF,0,0.0294,0.0,0.0,1.384447646314624,149,1,0.0,0.0
-1160,Kobbie Boateng Mainoo,45,England,MID,0,0.0294,0.0,0.0,1.8392042486601508,0,0,0.0,0.0
-845,N'golo Kante,33,France,MID,0,0.029,0.0,0.0,1.8479518261273142,0,0,0.0,0.0
-940,Gonzalo Ariel Montiel,37,Argentina,DEF,0,0.029,0.0,0.0,1.3998692924148544,114,1,0.0,0.0
-731,Alejandro Grimaldo,29,Spain,DEF,0,0.0288,0.0,0.0,1.195570213021005,0,0,0.0,0.0
-849,William Alain André Gabriel Saliba,33,France,DEF,0,0.0286,0.0,0.0,2.2589360721273875,450,5,0.0,0.0
-732,Eric Garcia,29,Spain,DEF,0,0.0284,0.0,0.0,1.223878475655714,0,0,0.0,0.0
-851,Théo Bernard François Hernandez,33,France,DEF,0,0.0282,0.0,0.0,1.885407693646525,192,2,0.0,0.0
-858,Maxence Guy Lacroix,33,France,DEF,0,0.028,0.0,0.0,2.077856376330425,180,2,0.0,0.0
-1165,Eberechi Oluchi Eze,45,England,MID,0,0.0272,0.0,0.0,1.8508256543614743,130,0,0.0,0.0
-1147,Nico Oreilly,45,England,DEF,0,0.0264,0.0,0.0,1.9500782459739872,456,5,0.0,0.0
-1168,Reece Lewis James,45,England,DEF,0,0.0252,0.0,0.0,1.8837085951825068,229,2,0.0,0.0
-857,Maghnes Akliouche,33,France,MID,0,0.025,0.0,0.0,1.7933081507752204,7,0,0.0,0.0
-1158,Jordan Brian Henderson,45,England,MID,0,0.0246,0.0,0.0,1.8207820784449966,7,0,0.0,0.0
-1149,John Stones,45,England,DEF,0,0.0238,0.0,0.0,1.7528854521647723,241,2,0.0,0.0
-1169,Tehuti Djed-Hotep Spence,45,England,DEF,0,0.0218,0.0,0.0,1.4595725979778669,221,2,0.0,0.0
-730,Marc Pubill,29,Spain,DEF,0,0.02,0.0,0.0,1.0465961088036342,1,0,0.0,0.0
-847,Ibrahima Konate,33,France,DEF,0,0.0178,0.0,0.0,1.2142705891971906,14,0,0.0,0.0
-853,Lucas Francois Bernard Hernandez,33,France,DEF,0,0.0176,0.0,0.0,1.2091313041121245,0,0,0.0,0.0
-834,Malo Arthur Gusto,33,France,DEF,0,0.017,0.0,0.0,1.1336268779040446,26,0,0.0,0.0
-1156,Trevoh Tom Chalobah,45,England,DEF,0,0.0164,0.0,0.0,0.995627375927924,0,0,0.0,0.0
-1159,Daniel Johnson Burn,45,England,DEF,0,0.0156,0.0,0.0,1.023850172950263,21,0,0.0,0.0
+953,Giuliano Simeone,37,Argentina,FWD,0,0.0324,0.0,0.0,3.911300187852349,143,2,0.0,0.0
+738,Daniel Olmo,29,Spain,FWD,0,0.0266,0.0,0.0,3.7739620223479657,419,5,0.0,0.0
+952,Thiago Ezequiel Almada,37,Argentina,FWD,0,0.0258,0.0,0.0,3.4921721736610194,242,3,0.0,0.0
+954,Nicolas Paz,37,Argentina,FWD,0,0.0256,0.0,0.0,3.424942056906771,70,1,0.0,0.0
+735,Ferran Torres,29,Spain,FWD,0,0.0252,0.0,0.0,3.1948068305843393,224,1,0.0,0.0
+744,Rodrigo Rodri,29,Spain,MID,0,0.0238,0.0,0.0,2.95177441228174,627,7,0.0,0.0
+950,Exequiel Alejandro Palacios,37,Argentina,MID,0,0.0238,0.0,0.0,2.8784612222496433,90,1,0.0,0.0
+748,Pedro Pedri,29,Spain,MID,0,0.0234,0.0,0.0,2.668227557890287,441,5,0.0,0.0
+957,Jose Manuel Alberto Lopez,37,Argentina,FWD,0,0.0232,0.0,0.0,2.824716214451543,18,0,0.0,0.0
+941,Leandro Daniel Paredes,37,Argentina,MID,0,0.023,0.0,0.0,2.5322013196177684,398,4,0.0,0.0
+753,Victor Munoz,29,Spain,FWD,0,0.0226,0.0,0.0,2.828403909837654,0,0,0.0,0.0
+745,Nicholas Williams,29,Spain,FWD,0,0.0216,0.0,0.0,2.990400766452833,63,0,0.0,0.0
+943,Rodrigo Javier De Paul,37,Argentina,MID,0,0.0214,0.0,0.0,2.750606961272229,425,5,0.0,0.0
+754,Borja Iglesias,29,Spain,FWD,0,0.0212,0.0,0.0,2.8858278947872167,1,0,0.0,0.0
+737,Pablo Gavi,29,Spain,MID,0,0.0194,0.0,0.0,2.3659271911423687,76,1,0.0,0.0
+750,Pau Cubarsi,29,Spain,DEF,0,0.019,0.0,0.0,2.171278429031158,630,7,0.0,0.0
+752,Marc Cucurella,29,Spain,DEF,0,0.0186,0.0,0.0,2.2309079153249867,630,7,0.0,0.0
+739,Yeremy Jesús Pino,29,Spain,FWD,0,0.0176,0.0,0.0,2.9654809064315364,68,0,0.0,0.0
+939,Nicolás Alejandro Tagliafico,37,Argentina,DEF,0,0.0172,0.0,0.0,1.8622433071783266,358,4,0.0,0.0
+962,Nahuel Molina,37,Argentina,DEF,0,0.0166,0.0,0.0,2.139879948677565,468,5,0.0,0.0
+742,Aymeric Laporte,29,Spain,DEF,0,0.016,0.0,0.0,2.2748771726019497,630,7,0.0,0.0
+944,Valentin Barco,37,Argentina,MID,0,0.0148,0.0,0.0,1.7289306344778563,19,0,0.0,0.0
+733,Marcos Llorente,29,Spain,DEF,0,0.0146,0.0,0.0,1.8925910769177055,186,2,0.0,0.0
+746,Martin Zubimendi,29,Spain,MID,0,0.0146,0.0,0.0,1.889309567176311,0,0,0.0,0.0
+961,Facundo Axel Medina,37,Argentina,DEF,0,0.0146,0.0,0.0,1.8500669166805093,258,3,0.0,0.0
+951,Nicolas Ivan Gonzalez,37,Argentina,MID,0,0.0142,0.0,0.0,1.8938854753552552,210,0,0.0,0.0
+938,Marcos Nicolás Senesi,37,Argentina,DEF,0,0.013,0.0,0.0,2.1014270023380224,90,1,0.0,0.0
+955,Nicolas Hernan Gonzalo Otamendi,37,Argentina,DEF,0,0.0116,0.0,0.0,1.3511143129812906,167,1,0.0,0.0
+940,Gonzalo Ariel Montiel,37,Argentina,DEF,0,0.0094,0.0,0.0,1.3498692924148545,132,1,0.0,0.0
+732,Eric Garcia,29,Spain,DEF,0,0.0092,0.0,0.0,1.223878475655714,0,0,0.0,0.0
+731,Alejandro Grimaldo,29,Spain,DEF,0,0.0088,0.0,0.0,1.195570213021005,0,0,0.0,0.0
+730,Marc Pubill,29,Spain,DEF,0,0.0086,0.0,0.0,1.0465961088036342,1,0,0.0,0.0
 1,José Raúl Rangel,1,Mexico,GK,0,0.0,0.0,0.0,1.8820205085046573,438,5,0.0,0.0
 2,Jorge Eduardo Sanchez,1,Mexico,DEF,0,0.0,0.0,0.0,2.248324387032065,349,4,0.0,0.0
 3,César Jasib Montes,1,Mexico,DEF,0,0.0,0.0,0.0,2.2280965928013,315,4,0.0,0.0
@@ -874,7 +839,7 @@ player_id,player_name,team_id,team_name,position,current_goals,expected_final_go
 728,Thomas Jefferson Smith,28,New Zealand,DEF,0,0.0,0.0,0.0,0.9976273722121249,0,0,0.0,0.0
 729,David Raya,29,Spain,GK,0,0.0,0.0,0.0,0.9197929052876113,0,0,0.0,0.0
 741,Joan Garcia,29,Spain,GK,0,0.0,0.0,0.0,0.8210495371211148,0,0,0.0,0.0
-751,Unai Simon,29,Spain,GK,0,0.0,0.0,0.0,2.0876484761600227,540,6,0.0,0.0
+751,Unai Simon,29,Spain,GK,0,0.0,0.0,0.0,2.0876484761600227,630,7,0.0,0.0
 755,José Vozinha,30,Cabo Verde,GK,0,0.0,0.0,0.0,2.0066502210934556,390,4,0.0,0.0
 756,Ianique Stopira,30,Cabo Verde,DEF,0,0.0,0.0,0.0,1.1782485971679804,0,0,0.0,0.0
 758,Carlos Pico Lopes,30,Cabo Verde,DEF,0,0.0,0.0,0.0,2.149048882469216,390,4,0.0,0.0
@@ -946,8 +911,27 @@ player_id,player_name,team_id,team_name,position,current_goals,expected_final_go
 831,Juan Manuel Sanabria,32,Uruguay,MID,0,0.0,0.0,0.0,2.359933743761719,204,2,0.0,0.0
 832,Radrigo Zalazar,32,Uruguay,MID,0,0.0,0.0,0.0,1.734949873360094,0,0,0.0,0.0
 833,Brice Lauriche Samba,33,France,GK,0,0.0,0.0,0.0,0.7792118669897968,0,0,0.0,0.0
-848,Mike Peterson Maignan,33,France,GK,0,0.0,0.0,0.0,1.9914632847234,540,6,0.0,0.0
+834,Malo Arthur Gusto,33,France,DEF,0,0.0,0.0,0.0,1.3836268779040446,116,1,0.0,0.0
+835,Lucas Digne,33,France,DEF,0,0.0,0.0,0.0,1.990493803266817,374,4,0.0,0.0
+836,Dayotchanculle Oswald Upamecano,33,France,DEF,0,0.0,0.0,0.0,2.132670588901089,661,7,0.0,0.0
+837,Jules Olivier Kounde,33,France,DEF,0,0.0,0.0,0.0,2.1443560459083733,605,7,0.0,0.0
+838,Emmanuel Boris Kone,33,France,MID,0,0.0,0.0,0.0,2.6327222011540616,405,4,0.0,0.0
+840,Aurélien Djani Tchouameni,33,France,MID,0,0.0,0.0,0.0,2.932256313444605,450,5,0.0,0.0
+841,Marcus Lilian Thuram,33,France,FWD,0,0.0,0.0,0.0,3.0036860440957422,1,0,0.0,0.0
+843,Michael Akpovie Olise,33,France,FWD,0,0.0,0.0,0.0,3.988600952682403,649,8,0.0,0.0
+845,N'golo Kante,33,France,MID,0,0.0,0.0,0.0,1.8479518261273142,0,0,0.0,0.0
+846,Adrien Thibault Marie Rabiot,33,France,MID,0,0.0,0.0,0.0,2.8971052039905043,495,6,0.0,0.0
+847,Ibrahima Konate,33,France,DEF,0,0.0,0.0,0.0,1.7142705891971906,59,1,0.0,0.0
+848,Mike Peterson Maignan,33,France,GK,0,0.0,0.0,0.0,1.9914632847234,720,8,0.0,0.0
+849,William Alain André Gabriel Saliba,33,France,DEF,0,0.0,0.0,0.0,2.2589360721273875,480,6,0.0,0.0
+850,Warren Marie Jean-Pierre Zaire-Emery,33,France,MID,0,0.0,0.0,0.0,2.826694020188566,180,2,0.0,0.0
+851,Théo Bernard François Hernandez,33,France,DEF,0,0.0,0.0,0.0,1.818741026979858,256,3,0.0,0.0
+853,Lucas Francois Bernard Hernandez,33,France,DEF,0,0.0,0.0,0.0,1.2091313041121245,0,0,0.0,0.0
+854,Jean-Philippe Mateta,33,France,FWD,0,0.0,0.0,0.0,2.817423351913119,22,0,0.0,0.0
 855,Robin François Philippe Risser,33,France,GK,0,0.0,0.0,0.0,0.7086683189183905,0,0,0.0,0.0
+856,Mathis Rayan Cherki,33,France,MID,0,0.0,0.0,0.0,2.0941050614774093,209,2,0.0,0.0
+857,Maghnes Akliouche,33,France,MID,0,0.0,0.0,0.0,1.7933081507752204,7,0,0.0,0.0
+858,Maxence Guy Lacroix,33,France,DEF,0,0.0,0.0,0.0,1.827856376330425,330,3,0.0,0.0
 859,Yehvann Djibril Victor Diouf,34,Senegal,GK,0,0.0,0.0,0.0,0.7383458170885175,0,0,0.0,0.0
 860,Mamadou Sarr,34,Senegal,DEF,0,0.0,0.0,0.0,1.092040088457983,0,0,0.0,0.0
 861,Kalidou Koulibaly,34,Senegal,DEF,0,0.0,0.0,0.0,2.225858654607475,162,2,0.0,0.0
@@ -1016,7 +1000,7 @@ player_id,player_name,team_id,team_name,position,current_goals,expected_final_go
 936,Julian Ryerson,36,Norway,FWD,0,0.0,0.0,0.0,3.9859084560949243,226,4,0.0,0.0
 937,Juan Agustín Musso,37,Argentina,GK,0,0.0,0.0,0.0,0.7453199601933546,0,0,0.0,0.0
 948,Geronimo Rulli,37,Argentina,GK,0,0.0,0.0,0.0,0.8200687739412569,0,0,0.0,0.0
-959,Damián Emiliano Martinez,37,Argentina,GK,0,0.0,0.0,0.0,2.000886600777289,600,6,0.0,0.0
+959,Damián Emiliano Martinez,37,Argentina,GK,0,0.0,0.0,0.0,2.000886600777289,690,7,0.0,0.0
 963,Melvin Feycal Mastil,38,Algeria,GK,0,0.0,0.0,0.0,0.6123506265720935,0,0,0.0,0.0
 964,Aissa Mandi,38,Algeria,DEF,0,0.0,0.0,0.0,2.17628370596629,360,4,0.0,0.0
 965,Achref Abada,38,Algeria,DEF,0,0.0,0.0,0.0,0.9844520841424207,0,0,0.0,0.0
@@ -1174,9 +1158,25 @@ player_id,player_name,team_id,team_name,position,current_goals,expected_final_go
 1142,Álvaro David Montero,44,Colombia,GK,0,0.0,0.0,0.0,0.8617048934578767,0,0,0.0,0.0
 1143,Luis Javier Suarez,44,Colombia,FWD,0,0.0,0.0,0.0,3.484236594315197,332,3,0.0,0.0
 1144,Carlos Andrés Gomez,44,Colombia,FWD,0,0.0,0.0,0.0,2.8505434131522778,1,0,0.0,0.0
-1145,Jordan Lee Pickford,45,England,GK,0,0.0,0.0,0.0,2.031566183394236,570,6,0.0,0.0
-1157,Dean Bradley Henderson,45,England,GK,0,0.0,0.0,0.0,0.849249361692395,0,0,0.0,0.0
+1145,Jordan Lee Pickford,45,England,GK,0,0.0,0.0,0.0,2.031566183394236,660,7,0.0,0.0
+1147,Nico Oreilly,45,England,DEF,0,0.0,0.0,0.0,1.8310306269263683,464,5,0.0,0.0
+1149,John Stones,45,England,DEF,0,0.0,0.0,0.0,1.8528854521647724,331,3,0.0,0.0
+1150,Keaninkin Marc-Isreal Guehi,45,England,DEF,0,0.0,0.0,0.0,2.0728137398682462,663,7,0.0,0.0
+1152,Elliot Junior Anderson,45,England,MID,0,0.0,0.0,0.0,2.6921515692172266,634,7,0.0,0.0
+1156,Trevoh Tom Chalobah,45,England,DEF,0,0.0,0.0,0.0,0.995627375927924,1,0,0.0,0.0
+1157,Dean Bradley Henderson,45,England,GK,0,0.0,0.0,0.0,1.849249361692395,90,1,0.0,0.0
+1158,Jordan Brian Henderson,45,England,MID,0,0.0,0.0,0.0,1.8207820784449966,7,0,0.0,0.0
+1159,Daniel Johnson Burn,45,England,DEF,0,0.0,0.0,0.0,1.023850172950263,29,0,0.0,0.0
+1160,Kobbie Boateng Mainoo,45,England,MID,0,0.0,0.0,0.0,1.8392042486601508,0,0,0.0,0.0
+1161,Morgan Elliot Rogers,45,England,MID,0,0.0,0.0,0.0,2.287841305672152,336,3,0.0,0.0
+1163,George Arthur Watkins,45,England,FWD,0,0.0,0.0,0.0,2.926949714964295,51,0,0.0,0.0
+1164,Azuka Tristan Madueke,45,England,FWD,0,0.0,0.0,0.0,3.690660614050031,287,4,0.0,0.0
+1165,Eberechi Oluchi Eze,45,England,MID,0,0.0,0.0,0.0,2.0508256543614745,209,1,0.0,0.0
+1166,Ivan Benjamin Elijah Toney,45,England,FWD,0,0.0,0.0,0.0,3.848227681447628,79,1,0.0,0.0
 1167,James Harrington Trafford,45,England,GK,0,0.0,0.0,0.0,0.7892644400067477,0,0,0.0,0.0
+1168,Reece Lewis James,45,England,DEF,0,0.0,0.0,0.0,1.8170419285158403,318,3,0.0,0.0
+1169,Tehuti Djed-Hotep Spence,45,England,DEF,0,0.0,0.0,0.0,1.6262392646445336,394,4,0.0,0.0
+1170,Jarell Amorin Quansah,45,England,DEF,0,0.0,0.0,0.0,2.055790471687864,207,3,0.0,0.0
 1171,Dominik Livakovic,46,Croatia,GK,0,0.0,0.0,0.0,1.9755766405116604,360,4,0.0,0.0
 1172,Josip Stanisic,46,Croatia,DEF,0,0.0,0.0,0.0,2.219896206400447,360,4,0.0,0.0
 1173,Marin Pongracic,46,Croatia,DEF,0,0.0,0.0,0.0,2.111054310566354,270,3,0.0,0.0
